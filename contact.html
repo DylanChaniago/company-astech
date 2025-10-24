@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ASTECH</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <img src="images/logo-astech.png" alt="ASTECH Logo" class="logo">
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICE</a></li>
+                <li><a href="careers.html">CAREERS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="darkModeToggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch for your after sales service solution</p>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-section">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telephone">Telephone</label>
+                            <input type="tel" id="telephone" name="telephone" placeholder="Phone Number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your service needs..." rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn submit-btn">Send Message</button>
+                    </form>
+
+                    <!-- WhatsApp CTA -->
+                    <div class="whatsapp-cta">
+                        <div class="whatsapp-divider">
+                            <span>Or Contact Directly</span>
+                        </div>
+                        <a href="https://wa.me/622138764275?text=Halo%20ASTECH,%20saya%20ingin%20konsultasi%20tentang%20layanan%20after-sales%20service" 
+                           class="btn whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-info-section">
+                    <h2>ASTECH Head Office</h2>
+                    <div class="office-info">
+                        <p><strong>Address:</strong><br>
+                        Ruko Niaga Kencana Sakti<br>
+                        Cengkareng Barat, Kota Jakarta Barat</p>
+                        
+                        <p><strong>Phone:</strong> (021) 3876 4275</p>
+                        <p><strong>Email:</strong> contact@astech.co.id</p>
+                        <p><strong>Business Hours:</strong><br>
+                        Mon - Sat: 9:00 AM - 6:00 PM</p>
+                    </div>
+
+                    <!-- Contact Methods -->
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Phone Call</h4>
+                                <p>Speak directly with our team</p>
+                                <a href="tel:02138764275" class="method-link">(021) 3876 4275</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <p>Send us detailed inquiries</p>
+                                <a href="mailto:contact@astech.co.id" class="method-link">contact@astech.co.id</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Visit Us</h4>
+                                <p>Meet us at our service center</p>
+                                <span class="method-text">Jakarta Barat</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps -->
+                    <div class="map-container">
+                        <h3>Find Us</h3>
+                        <div class="map-wrapper">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.782722555321!2d106.7177771!3d-6.152484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f66f858062e7%3A0x85ef2a6fc99bd22e!2sASTECH!5e0!3m2!1sen!2sid!4v1690000000000!5m2!1sen!2sid" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="ASTECH Office Location">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo-astech.png" alt="ASTECH Logo" class="footer-logo">
+                    <p>Quality Through Service</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Ruko Niaga Kencana Sakti, Jakarta Barat</p>
+                    <p><i class="fas fa-phone"></i> (021) 3876 4275</p>
+                    <p><i class="fas fa-envelope"></i> contact@astech.co.id</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2019 PT Aneka Solusi Teknologi (ASTECH). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

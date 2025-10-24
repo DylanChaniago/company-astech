@@ -1,0 +1,11 @@
+{
+  "name": "astech-website",
+  "version": "1.0.0",
+  "description": "ASTECH Company Profile Website",
+  "scripts": {
+    "build": "echo 'No build process needed - static site'"
+  },
+  "keywords": ["astech", "company-profile", "static-website"],
+  "author": "ASTECH",
+  "license": "MIT"
+}
