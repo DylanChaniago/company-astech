@@ -204,6 +204,63 @@
             }
         }
         
+        /* About Preview Video Styles */
+        .about-preview .subtitle {
+            font-size: 1.2em;
+            color: var(--primary-orange);
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .about-preview .separator {
+            width: 80px;
+            height: 3px;
+            background: var(--primary-orange);
+            margin: 0 auto 30px auto;
+            border-radius: 2px;
+        }
+        
+        .video-showcase {
+            margin: 30px 0;
+            text-align: center;
+            background: var(--background-gray);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .video-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: block;
+        }
+        
+        .video-placeholder {
+            background: #f5f5f5;
+            padding: 60px 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px dashed #ddd;
+        }
+        
+        .video-placeholder i {
+            font-size: 3em;
+            color: var(--primary-orange);
+            margin-bottom: 15px;
+        }
+        
+        .video-placeholder p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+        }
+        
         /* Dark mode adjustments */
         body.dark-mode .stat-box {
             background: var(--card-dark);
@@ -220,6 +277,15 @@
         body.dark-mode .faq-preview .faq-item p {
             color: var(--text-dark);
             opacity: 0.8;
+        }
+        
+        body.dark-mode .video-showcase {
+            background: var(--card-dark);
+        }
+        
+        body.dark-mode .video-placeholder {
+            background: var(--card-dark);
+            border-color: #444;
         }
         
         /* Responsive design */
@@ -268,6 +334,10 @@
                 width: 55px;
                 height: 55px;
                 font-size: 1.6em;
+            }
+            
+            .video-showcase {
+                padding: 20px;
             }
         }
         
@@ -361,6 +431,30 @@
     <section class="about-preview">
         <div class="container">
             <h2>About ASTECH</h2>
+            <p class="subtitle">& AFTER SALES SERVICE COMPANY</p>
+            
+            <div class="separator"></div>
+            
+            <!-- Video Showcase - FIXED VERSION -->
+            <div class="video-showcase">
+                <div class="video-container">
+                    <!-- Coba path yang berbeda untuk video -->
+                    <video autoplay muted loop playsinline width="100%">
+                        <source src="images/video/astech-company-profile.mp4" type="video/mp4">
+                        <source src="images/video/astech-company-profile.mp4" type="video/mp4">
+                        <source src="assets/videos/astech-company-profile.mp4" type="video/mp4">
+                        <!-- Jika semua video gagal, tampilkan placeholder -->
+                    </video>
+                </div>
+                <!-- Fallback placeholder yang terpisah -->
+                <div class="video-placeholder" style="display: none; margin-top: 20px;">
+                    <i class="fas fa-video"></i>
+                    <h3>ASTECH Company Profile</h3>
+                    <p>Video company profile akan ditampilkan di sini</p>
+                    <small>Pastikan file video tersedia di folder video/</small>
+                </div>
+            </div>
+            
             <p>Established in January 2004, ASTECH has been a pioneer and leading company for After Sales Service with nationwide coverage servicing Consumer Electronics, Computer, Home Appliances, and Mobile Phone products within Indonesia.</p>
             
             <div class="stats-highlight">
@@ -520,7 +614,6 @@
                     <img src="images/logo-astech.png" alt="ASTECH Logo" class="footer-logo">
                     <p>Quality Through Service</p>
                     <div class="social-links">
-                        <!-- Ganti URL dengan link media sosial ASTECH yang sebenarnya -->
                         <a href="https://www.facebook.com/astech.indonesia" target="_blank" rel="noopener noreferrer" aria-label="Facebook ASTECH">
                             <i class="fab fa-facebook"></i>
                         </a>
@@ -570,5 +663,28 @@
     </a>
 
     <script src="js/script.js"></script>
+    <script>
+        // JavaScript untuk handle video error
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('.video-container video');
+            const placeholder = document.querySelector('.video-placeholder');
+            
+            if (video) {
+                video.addEventListener('error', function() {
+                    // Jika video error, sembunyikan video dan tampilkan placeholder
+                    video.style.display = 'none';
+                    placeholder.style.display = 'block';
+                });
+                
+                // Cek setelah 3 detik apakah video berhasil load
+                setTimeout(function() {
+                    if (video.readyState === 0) { // HAVE_NOTHING
+                        video.style.display = 'none';
+                        placeholder.style.display = 'block';
+                    }
+                }, 3000);
+            }
+        });
+    </script>
 </body>
 </html>
